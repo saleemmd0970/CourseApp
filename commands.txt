@@ -1,0 +1,19 @@
+npm and bower 
+
+npm -> other dependencies to run app like browersync,gulp etc..
+bower -> true UI dependencies angular, bootstrap etc..
+--http://stackoverflow.com/questions/18641899/what-is-the-difference-between-bower-and-npm
+Install Node-JS
+From command line execute below commands
+npm -v
+npm install -g bower
+bower -v
+npm install -g gulp
+gulp -v
+--cd to the project folder
+gulp serve
+
+docker build -t courseui .
+docker images
+docker run -d --name courseapp -p 80:9000 courseui
+docker ps

@@ -1,0 +1,13 @@
+<div ng-if="formControl.$touched && formControl.$invalid" class="alert alert-danger">
+    <div ng-show="formControl.$error.required">
+        {{fieldLabel}} is required
+    </div>
+    <div ng-show="!formControl.$error.required && formControl.$invalid">
+        <div ng-show="formControl.$error.alreadyTaken">
+            {{fieldLabel}} already taken
+        </div>
+        <div ng-show="!formControl.$error.alreadyTaken">
+            {{fieldLabel}} entered is invalid
+        </div>
+    </div>
+</div>

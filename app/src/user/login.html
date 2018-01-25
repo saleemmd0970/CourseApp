@@ -1,0 +1,17 @@
+<h1>Login</h1>
+<form name="loginForm" novalidate>
+
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="email" id="username" name="userName" class="form-control" placeholder="Registered email" ng-model="login.userName" required>
+        <show-message form-control="loginForm.userName" field-label="Username" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" ng-model="login.password" required>
+        <show-message form-control="loginForm.password" field-label="Password" />
+
+    </div>
+    <button class="btn btn-primary" ng-disabled="loginForm.$invalid" ng-click="loginToApp()"> Login</button>
+    <a ui-sref="signup">Signup</a>
+</form>

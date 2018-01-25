@@ -1,0 +1,10 @@
+<h2> Topics for {{selectedCourse.name}}</h2>
+
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="topic in selectedCourse.topics">
+        <span class="badge">{{topic.duration}}</span> {{topic.name}}
+    </li>
+</ul>
+
+<button class="btn btn-primary" ng-click="register()" ng-disabled="selectedCourse.author == loggedInUser.userName">Take this course</button>
+<button class="btn btn-primary" ng-show="selectedCourse.author == loggedInUser.userName" ng-click="editCourse()">Edit this course</button>

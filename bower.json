@@ -1,0 +1,23 @@
+{
+    "name": "courseapp",
+    "description": "Course app ui",
+    "main": "index.js",
+    "authors": [
+    "Appi"
+  ],
+    "license": "ISC",
+    "homepage": "",
+    "dependencies": {
+        "angular": "^1.5.8",
+        "angular-ui-router": "^0.3.1",
+        "angular-resource": "^1.5.8",
+        "angular-sanitize": "^1.5.8",
+        "angular-cookies": "^1.5.8",
+        "angular-animate": "^1.5.8",
+        "angular-mocks": "^1.5.8",
+        "angular-bootstrap": "^2.0.1",
+        "ngMask": "angular-mask#^3.1.1",
+        "components-font-awesome": "^4.6.3",
+        "bootswatch-dist": "flatly"
+    }
+}

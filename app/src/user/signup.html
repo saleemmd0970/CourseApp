@@ -1,0 +1,42 @@
+<h1>Signup</h1>
+<div class="row">
+    <div class="col-md-8 col-lg-8 col-sm-6 col-xs-4 well">
+        <form name="signupForm" novalidate>
+            <div class="form-group required" ng-class="{'has-error': signupForm.userName.$touched && signupForm.userName.$invalid}">
+                <label for="username" class="control-label">Username</label>
+                <input type="email" class="form-control" id="userName" name="userName" placeholder="Email" ng-model-options="{ updateOn: 'blur' }" ng-model="user.userName" required username-validator>
+                <spinner pending="{{signupForm.userName.$pending}}"></spinner>
+                <show-message form-control="signupForm.userName" field-label="Email" />
+            </div>
+            <div class="form-group required">
+                <label for="password" class="control-label">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" ng-model="user.password" ng-pattern="regex" required>
+                <show-message form-control="signupForm.password" field-label="Password" />
+            </div>
+            <div class="form-group required">
+                <label for="fName" class="control-label">First Name</label>
+                <input type="text" class="form-control" id="fName" name="fName" placeholder="First Name" ng-model="user.fName" required>
+                <show-message form-control="signupForm.fName" field-label="Firstname" />
+            </div>
+            <div class="form-group">
+                <label for="mName">Middle Name</label>
+                <input type="text" id="mName" class="form-control" placeholder="Middle Name" ng-model="user.mName">
+            </div>
+            <div class="form-group required">
+                <label for="lName" class="control-label">Last Name</label>
+                <input type="text" id="lName" name="lName" class="form-control" placeholder="Last Name" ng-model="user.lName" required>
+                <show-message form-control="signupForm.lName" field-label="Lastname" />
+            </div>
+            <div class="form-group">
+                <label for="dob">DOB</label>
+                <input type="text" class="form-control" id="dob" name="dob" ng-model="user.dob" mask="99-99-9999" placeholder="MM-DD-YYYY">
+                <show-message form-control="signupForm.dob" field-label="DOB" />
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" id="phoneNumber" class="form-control" mask="(999)-999-9999" placeholder="(999)-999-9999" clean="true" ng-model="user.phoneNumber">
+            </div>
+            <button class=" btn btn-primary " ng-disabled="signupForm.$invalid" ng-click="signup()">Save</button>
+        </form>
+    </div>
+</div>

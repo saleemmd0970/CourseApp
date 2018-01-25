@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/build/app.css">
+    <!-- endinject -->
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="assets/build/vendors.css">
+    <!-- endinject -->
+
+    <!-- bower:js -->
+    <script src="assets/build/vendors.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <script src="assets/build/app.js"></script>
+    <!-- endinject -->
+    <style>
+        .form-group.required .control-label:after {
+            content: "*";
+            color: red;
+        }
+        
+        a:hover {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body ng-app="CourseApp">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="courses">Course Application</a>
+            </div>
+            <div class="collapse navbar-collapse" ng-if="showLogout">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a ng-click="logOut()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div ui-view></div>
+    </div>
+</body>
+
+</html>
